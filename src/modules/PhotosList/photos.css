@@ -5,3 +5,16 @@
     width: 400;
     height: auto;
 }
+
+img {
+	animation: .5s ease-in-out 0s 1 slideInFromLeft;	
+}
+
+@keyframes slideInFromLeft {
+	0% {
+	  transform: translateX(-100%);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+}

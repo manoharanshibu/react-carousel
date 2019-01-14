@@ -10,6 +10,7 @@ import { IPhoto } from '../../reducers/photos/models';
 import { getPhotos } from '../../actions/photos_action';
 import { IStore } from '../../reducers/index';
 import { Loader } from '../../utilities/Loader'
+import ArrowSVG from './arrow.svg';
 
 interface IProps{
     photos: IPhoto[];
@@ -39,6 +40,22 @@ const SSection = styled.div`
     display: inline-block;
 `;
 
+const SSectionContainer = styled.div`
+    position: absolute;
+    vertical-align: middle;
+    horizontal-align: center;
+`;
+
+
+const ImgArrowLeft = styled.img`
+    transform: rotate(180deg);
+    float: left;
+`;
+
+const ImgArrowRight = styled.img`
+    float: right;
+`;
+
 const imageWidth = 120;
 
 class PhotoList extends Component<IProps, IState>{
@@ -53,6 +70,10 @@ class PhotoList extends Component<IProps, IState>{
     }
     componentDidMount(){
         this.props.getPhotos();
+
+        $( window ).resize(() => {
+            this.setState({numPhotos: this.getNumPhotos()})
+        });
     }
 
     getNumPhotos = () => {
@@ -71,7 +92,7 @@ class PhotoList extends Component<IProps, IState>{
 
     onNext = (e: any) =>{
         if((this.state.pageIndex + 1) * this.state.numPhotos < this.props.photos.length){
-            $("#photoContainer").fadeOut( () => {
+            $("#photoContainer").fadeOut( 600, () => {
                 this.setState({ pageIndex: this.state.pageIndex + 1});
                 $("#photoContainer").fadeIn();  
             });
@@ -81,7 +102,7 @@ class PhotoList extends Component<IProps, IState>{
     onPrevious = (e: any) => {
         e.preventDefault();
         if(this.state.pageIndex > 0){
-            $("#photoContainer").fadeOut( () => {
+            $("#photoContainer").fadeOut( 600, () => {
                 this.setState({ pageIndex: this.state.pageIndex - 1});
                 $("#photoContainer").fadeIn();  
             });
@@ -107,14 +128,17 @@ class PhotoList extends Component<IProps, IState>{
         });
 
         return (
-            <div>
+            <SSectionContainer>
+                { this.state.numPhotos === 1 && <ImgArrowLeft src={ArrowSVG} /> }
                 <div id="photoContainer">
                     {photos}
                 </div>
-                <br />
-                <button className="prev-next" onClick={this.onPrevious}>Prev</button>&nbsp;&nbsp;&nbsp;
-                <button className="prev-next" onClick={this.onNext}>Next</button>
-            </div>)
+                { this.state.numPhotos !== 1 && <div>
+                    <button className="prev-next" onClick={this.onPrevious}>Prev</button>&nbsp;&nbsp;&nbsp;
+                    <button className="prev-next" onClick={this.onNext}>Next</button>
+                </div> }
+                { this.state.numPhotos === 1 && <ImgArrowRight src={ArrowSVG} /> }
+            </SSectionContainer>)
     }
 }
 
