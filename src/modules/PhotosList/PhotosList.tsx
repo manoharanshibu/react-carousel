@@ -11,6 +11,7 @@ import { getPhotos } from '../../actions/photos_action';
 import { IStore } from '../../reducers/index';
 import { Loader } from '../../utilities/Loader'
 import ArrowSVG from './arrow.svg';
+// import $ from 'jquery';
 
 interface IProps{
     photos: IPhoto[];
@@ -50,10 +51,18 @@ const SSectionContainer = styled.div`
 const ImgArrowLeft = styled.img`
     transform: rotate(180deg);
     float: left;
+    cursor: pointer;
+    vertical-align: middle;
+    horizontal-align: center;
+    text-align: center;
 `;
 
 const ImgArrowRight = styled.img`
     float: right;
+    cursor: pointer;
+    vertical-align: middle;
+    horizontal-align: center;
+    text-align: center;
 `;
 
 const imageWidth = 120;
@@ -129,7 +138,7 @@ class PhotoList extends Component<IProps, IState>{
 
         return (
             <SSectionContainer>
-                { this.state.numPhotos === 1 && <ImgArrowLeft src={ArrowSVG} /> }
+                { this.state.numPhotos === 1 && <ImgArrowLeft src={ArrowSVG} onClick={this.onPrevious}/> }
                 <div id="photoContainer">
                     {photos}
                 </div>
@@ -137,7 +146,7 @@ class PhotoList extends Component<IProps, IState>{
                     <button className="prev-next" onClick={this.onPrevious}>Prev</button>&nbsp;&nbsp;&nbsp;
                     <button className="prev-next" onClick={this.onNext}>Next</button>
                 </div> }
-                { this.state.numPhotos === 1 && <ImgArrowRight src={ArrowSVG} /> }
+                { this.state.numPhotos === 1 && <ImgArrowRight src={ArrowSVG} onClick={this.onNext}/> }
             </SSectionContainer>)
     }
 }

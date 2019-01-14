@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/modules/PhotosList/PhotosList.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/modules/PhotosList</a> PhotosList.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">74.55% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>41/55</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.53% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>25/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">74.07% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>40/54</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Action } from 'redux';
+import styled from 'styled-components';
+import { ThunkDispatch } from 'redux-thunk';
+&nbsp;
+import {Photo} from './Photo';
+import './photos.css';
+import { IPhoto } from '../../reducers/photos/models';
+import { getPhotos } from '../../actions/photos_action';
+import { IStore } from '../../reducers/index';
+import { Loader } from '../../utilities/Loader'
+import ArrowSVG from './arrow.svg';
+import $ from 'jquery';
+&nbsp;
+interface IProps{
+    photos: IPhoto[];
+    isLoading: boolean;
+}
+&nbsp;
+interface IState{
+    isVisibl<span class="missing-if-branch" title="if path not taken" >I</span>e: boolean,
+    pageIndex: n<span class="cstat-no" title="statement not covered" >umber,</span>
+    numPhotos: number
+}<span class="missing-if-branch" title="if path not taken" >I</span>
+<span class="cstat-no" title="statement not covered" ></span>
+interface IMapStateToProps {
+    photos: IPhot<span class="missing-if-branch" title="if path not taken" >I</span>o[];
+    isLoading: b<span class="cstat-no" title="statement not covered" >oolean;</span>
+}
+<span class="missing-if-branch" title="if path not taken" >I</span>
+interface IMapDi<span class="cstat-no" title="statement not covered" >spatchToPr</span>ops {
+    getPhotos: (onSuccess?: any) =&gt; Promise&lt;void&gt;;
+}
+&nbsp;
+interface IProps extend<span class="fstat-no" title="function not covered" >s </span>IMapStateToProps, IMapDispatchToProps {}
+<span class="cstat-no" title="statement not covered" ></span>
+const SSection =<span class="cstat-no" title="statement not covered" > styled.div`<span class="fstat-no" title="function not covered" ></span></span>
+    width: 200px;<span class="cstat-no" title="statement not covered" ></span>
+    padding: 0px;<span class="cstat-no" title="statement not covered" ></span>
+    display: inline-block;
+`;
+&nbsp;
+const SSectionContainer = s<span class="fstat-no" title="function not covered" >ty</span>led.div`
+    position<span class="cstat-no" title="statement not covered" >: absolute;</span>
+    vertical<span class="cstat-no" title="statement not covered" >-align: middle;</span>
+    horizontal-a<span class="cstat-no" title="statement not covered" >lign: center;<span class="fstat-no" title="function not covered" ></span></span>
+`;<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const ImgArrowLeft = styled.img`
+    transform: rotate(180deg);
+    float: left;
+    cursor: pointer;
+    vertical-align: middle;
+    horizontal-align: center;
+    text-align: center;
+`;
+&nbsp;
+const ImgArrowRight = styled.img`
+    float: right;
+    cursor: pointer;
+    vertical-align: middl<span class="fstat-no" title="function not covered" >e;</span>
+    horizont<span class="cstat-no" title="statement not covered" >al-align: center;</span>
+    text-align: center;
+`;
+&nbsp;
+const imageWidth = 120;
+&nbsp;
+class PhotoList extends Component&lt;IProps, IState&gt;{
+&nbsp;
+    constructor(props?: any){
+        super(props);
+        this.state = {
+            pageIndex: 0,
+            isVisible: false,
+            numPhotos: this.getNumPhotos()
+        };
+    }<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+    componentDidMount(){
+        this.props.getPhotos();
+&nbsp;
+        $( window ).resize(() =&gt; {
+            this.setState({numPhotos: this.getNumPhotos()})
+        });
+    }
+&nbsp;
+    getNumPhotos = () =&gt; {
+        const numItems = document.body.offsetWidth / imageWidth;
+        if(numItems &gt; 10){
+            return 5;
+        }else if(numItems &gt; 8){
+            return 4;
+        }else if(numItems &gt; 7){
+            return 3;
+        }else if(numItems &gt; 5){
+            return 2;
+        }
+        return 1;
+    }
+&nbsp;
+    onNext = (e: any) =&gt;{
+&nbsp;
+        if((this.state.pageIndex + 1) * this.state.numPhotos &lt; this.props.photos.length){
+            $("#photoContainer").fadeOut( 600, () =&gt; {
+                this.setState({ pageIndex: this.state.pageIndex + 1});
+                $("#photoContainer").fadeIn();  
+            });
+        }
+    }
+&nbsp;
+    onPrevious = (e: any) =&gt; {
+        e.preventDefault();
+        if(this.state.pageIndex &gt; 0){
+            $("#photoContainer").fadeOut( 600, () =&gt; {
+                this.setState({ pageIndex: this.state.pageIndex - 1});
+                $("#photoContainer").fadeIn();  
+            });
+        }
+    }
+&nbsp;
+    render(){
+&nbsp;
+        if(this.props.isLoading){
+            return &lt;Loader /&gt;;
+        }
+&nbsp;
+        const photosToDisplay = this.props.photos.slice((this.state.pageIndex + 1) * this.state.numPhotos - this.state.numPhotos, (this.state.pageIndex + 1) * this.state.numPhotos);
+&nbsp;
+        const photos = photosToDisplay.map((photo: IPhoto, index: number) =&gt; {
+                return &lt;SSection key={index} &gt;&lt;Photo
+                key={index}
+                id={index} 
+                title={photo.title}
+                thumbnailUrl={photo.thumbnailUrl}
+                url={photo.url}
+            /&gt;&lt;/SSection&gt;
+        });
+&nbsp;
+        return (
+            &lt;SSectionContainer&gt;
+                { this.state.numPhotos === 1 &amp;&amp; &lt;ImgArrowLeft src={ArrowSVG} onClick={this.onPrevious}/&gt; }
+                &lt;div id="photoContainer"&gt;
+                    {photos}
+                &lt;/div&gt;
+                { this.state.numPhotos !== 1 &amp;&amp; &lt;div&gt;
+                    &lt;button className="prev-next" onClick={this.onPrevious}&gt;Prev&lt;/button&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+                    &lt;button className="prev-next" onClick={this.onNext}&gt;Next&lt;/button&gt;
+                &lt;/div&gt; }
+                { this.state.numPhotos === 1 &amp;&amp; &lt;ImgArrowRight src={ArrowSVG} onClick={this.onNext}/&gt; }
+            &lt;/SSectionContainer&gt;)
+    }
+}
+&nbsp;
+const mapStateToProps = (state: IStore): IMapStateToProps =&gt; { 
+    
+    const photosArr = [];  
+    for (const item in state.photos) {   
+        if (state.photos[item] &amp;&amp; state.photos[item] instanceof Object) {
+            photosArr.push(state.photos[item])
+        }
+    }
+    
+    return ({
+        photos: photosArr,
+        isLoading: state.photos.isLoading 
+    })
+};
+&nbsp;
+const mapDispatchToProps = (dispatch: ThunkDispatch&lt;any, any, Action&gt;): IMapDispatchToProps =&gt; ({
+    getPhotos: (onSuccess?: any) =&gt; dispatch(getPhotos(onSuccess)),
+});
+&nbsp;
+export const PhotosList = connect(mapStateToProps, mapDispatchToProps)(PhotoList);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jan 14 2019 20:21:41 GMT+0000 (Greenwich Mean Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

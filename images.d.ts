@@ -7,3 +7,6 @@ declare module '*.bmp'
 declare module '*.tiff'
 declare module '*.redux-thunk'
 declare module 'react-lazy-load'
+declare module 'enzyme'
+declare module 'enzyme-adapter-react-16'
+declare module '$';

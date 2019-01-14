@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1547497301330" clover="3.2.0">
+  <project timestamp="1547497301331" name="All files">
+    <metrics statements="130" coveredstatements="87" conditionals="95" coveredconditionals="47" methods="48" coveredmethods="23" elements="273" coveredelements="157" complexity="0" loc="130" ncloc="130" packages="7" files="13" classes="13">
+      <package name="src">
+        <metrics statements="34" coveredstatements="12" conditionals="42" coveredconditionals="6" methods="22" coveredmethods="4"/>
+        <file name="App.tsx" path="/Users/apple/react-carousel/src/App.tsx">
+          <metrics statements="7" coveredstatements="7" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3"/>
+          <line num="8" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="12" count="1" type="cond" truecount="3" falsecount="0"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="/Users/apple/react-carousel/src/index.tsx">
+          <metrics statements="6" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="12"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+        </file>
+        <file name="registerServiceWorker.ts" path="/Users/apple/react-carousel/src/registerServiceWorker.ts">
+          <metrics statements="15" coveredstatements="0" conditionals="23" coveredconditionals="0" methods="15" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="105" count="0" type="cond" truecount="0" falsecount="3"/>
+          <line num="107" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="108" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="111" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="112" count="0" type="stmt"/>
+          <line num="114" count="0" type="stmt"/>
+          <line num="115" count="0" type="cond" truecount="0" falsecount="6"/>
+          <line num="119" count="0" type="stmt"/>
+          <line num="122" count="0" type="stmt"/>
+          <line num="123" count="0" type="stmt"/>
+          <line num="124" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="125" count="0" type="stmt"/>
+          <line num="126" count="0" type="cond" truecount="0" falsecount="2"/>
+        </file>
+        <file name="store.ts" path="/Users/apple/react-carousel/src/store.ts">
+          <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="10" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="11" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.actions">
+        <metrics statements="19" coveredstatements="15" conditionals="7" coveredconditionals="5" methods="4" coveredmethods="4"/>
+        <file name="photos_action.ts" path="/Users/apple/react-carousel/src/actions/photos_action.ts">
+          <metrics statements="19" coveredstatements="15" conditionals="7" coveredconditionals="5" methods="4" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="4" type="cond" truecount="5" falsecount="0"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.actions.action-types">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <file name="action-types.ts" path="/Users/apple/react-carousel/src/actions/action-types/action-types.ts">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.modules.PhotosList">
+        <metrics statements="58" coveredstatements="44" conditionals="38" coveredconditionals="29" methods="15" coveredmethods="10"/>
+        <file name="Photo.tsx" path="/Users/apple/react-carousel/src/modules/PhotosList/Photo.tsx">
+          <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="6" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+        </file>
+        <file name="PhotosList.tsx" path="/Users/apple/react-carousel/src/modules/PhotosList/PhotosList.tsx">
+          <metrics statements="54" coveredstatements="40" conditionals="34" coveredconditionals="25" methods="14" coveredmethods="9"/>
+          <line num="11" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="12" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="13" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="14" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="19" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="22" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="25" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="28" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="31" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="46" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="53" count="1" type="stmt"/>
+          <line num="58" count="1" type="stmt"/>
+          <line num="60" count="1" type="stmt"/>
+          <line num="61" count="1" type="stmt"/>
+          <line num="62" count="1" type="stmt"/>
+          <line num="63" count="1" type="stmt"/>
+          <line num="64" count="0" type="stmt"/>
+          <line num="67" count="1" type="stmt"/>
+          <line num="68" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="69" count="1" type="stmt"/>
+          <line num="71" count="1" type="stmt"/>
+          <line num="72" count="1" type="stmt"/>
+          <line num="73" count="1" type="stmt"/>
+          <line num="76" count="1" type="stmt"/>
+          <line num="85" count="1" type="stmt"/>
+          <line num="87" count="1" type="stmt"/>
+          <line num="88" count="2" type="stmt"/>
+          <line num="89" count="2" type="stmt"/>
+          <line num="90" count="8" type="cond" truecount="4" falsecount="0"/>
+          <line num="91" count="2" type="stmt"/>
+          <line num="94" count="2" type="stmt"/>
+          <line num="99" count="1" type="stmt"/>
+          <line num="100" count="1" type="stmt"/>
+          <line num="102" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.reducers">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/apple/react-carousel/src/reducers/index.ts">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="src.reducers.photos">
+        <metrics statements="9" coveredstatements="7" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <file name="index.ts" path="/Users/apple/react-carousel/src/reducers/photos/index.ts">
+          <metrics statements="8" coveredstatements="7" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="5" type="cond" truecount="3" falsecount="1"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="26" count="3" type="stmt"/>
+        </file>
+        <file name="models.ts" path="/Users/apple/react-carousel/src/reducers/photos/models.ts">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.utilities">
+        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <file name="Loader.tsx" path="/Users/apple/react-carousel/src/utilities/Loader.tsx">
+          <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="6" count="1" type="stmt"/>
+        </file>
+        <file name="api.ts" path="/Users/apple/react-carousel/src/utilities/api.ts">
+          <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

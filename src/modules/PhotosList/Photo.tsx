@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazy-load';
-// import ArrowSVG from './arrow.svg';
 
 const Img = styled.img`
     display: block;
@@ -9,6 +8,9 @@ const Img = styled.img`
     height: auto;
     padding: 10px;
     margin: 0 auto;
+    vertical-align: middle;
+    horizontal-align: center;
+    text-align: center;    
 `;
 
 const PhotoContainer = styled.div`
