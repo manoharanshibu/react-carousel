@@ -41,13 +41,21 @@ const SSection = styled.div`
     display: inline-block;
 `;
 
-const SSectionContainer = styled.div`
+const SButtonSectionContainer = styled.div`
+    display: block;
     width: 100%;
     position: absolute;
     vertical-align: middle;
-    horizontal-align: center;
+    justify-content: center;
 `;
 
+const SArrowSectionContainer = styled.div`
+    display: flex;
+    width: 100%;
+    position: absolute;
+    vertical-align: middle;
+    justify-content: center;
+`;
 
 const ImgArrowLeft = styled.img`
     transform: rotate(180deg);
@@ -66,7 +74,7 @@ const ImgArrowRight = styled.img`
     text-align: center;
 `;
 
-const imageWidth = 120;
+const imageWidth = 220;
 
 class PhotoList extends Component<IProps, IState>{
 
@@ -88,16 +96,8 @@ class PhotoList extends Component<IProps, IState>{
 
     getNumPhotos = () => {
         const numItems = document.body.offsetWidth / imageWidth;
-        if(numItems > 10){
-            return 5;
-        }else if(numItems > 8){
-            return 4;
-        }else if(numItems > 7){
-            return 3;
-        }else if(numItems > 5){
-            return 2;
-        }
-        return 1;
+        if(numItems < 1) return 1;
+        return Math.floor(numItems);
     }
 
     onNext = (e: any) =>{
@@ -114,7 +114,6 @@ class PhotoList extends Component<IProps, IState>{
     }
 
     onPrevious = (e: any) => {
-        e.preventDefault();
        if(this.state.pageIndex > 0){
             $("#photoContainer").fadeOut( 600, () => {
                 this.setState({ pageIndex: this.state.pageIndex - 1});
@@ -125,6 +124,34 @@ class PhotoList extends Component<IProps, IState>{
                 }
             });
         }
+    }
+
+    renderMultiPhotoElements(photos:any){
+        return <SButtonSectionContainer>
+        <div id="photoContainer">
+            {photos}
+        </div>
+        <div>
+            <button className="prev-next" disabled={this.state.pageIndex <= 0} onClick={this.onPrevious}>Prev</button>&nbsp;&nbsp;&nbsp;
+            <button className="prev-next" disabled={(this.state.pageIndex + 1) * this.state.numPhotos >= this.props.photos.length-1} onClick={this.onNext}>Next</button>
+        </div>
+        </SButtonSectionContainer>
+    }
+
+    renderSinglePhotoElement(photo:any){
+        return (
+            <SArrowSectionContainer>
+                <ImgArrowLeft src={ArrowSVG} onClick={this.onPrevious}/>
+                <div id="photoContainer">
+                    {photo}
+                </div>
+                <ImgArrowRight src={ArrowSVG} onClick={this.onNext}/>
+            </SArrowSectionContainer>)
+    }
+
+    getRenderer(photos:any, numPhotos:number){
+        if(numPhotos !== 1) return this.renderMultiPhotoElements(photos);
+        else return this.renderSinglePhotoElement(photos);
     }
 
     render(){
@@ -144,19 +171,8 @@ class PhotoList extends Component<IProps, IState>{
                 url={photo.url}
             /></SSection>
         });
-
-        return (
-            <SSectionContainer>
-                { this.state.numPhotos === 1 && <ImgArrowLeft src={ArrowSVG} onClick={this.onPrevious}/> }
-                <div id="photoContainer">
-                    {photos}
-                </div>
-                { this.state.numPhotos !== 1 && <div>
-                    <button className="prev-next" disabled={this.state.pageIndex <= 0} onClick={this.onPrevious}>Prev</button>&nbsp;&nbsp;&nbsp;
-                    <button className="prev-next" disabled={(this.state.pageIndex + 1) * this.state.numPhotos >= this.props.photos.length-1} onClick={this.onNext}>Next</button>
-                </div> }
-                { this.state.numPhotos === 1 && <ImgArrowRight src={ArrowSVG} onClick={this.onNext}/> }
-            </SSectionContainer>)
+        return this.getRenderer(photos, this.state.numPhotos);
+        
     }
 }
 
