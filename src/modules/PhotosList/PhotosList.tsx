@@ -100,20 +100,28 @@ class PhotoList extends Component<IProps, IState>{
     }
 
     onNext = (e: any) =>{
-        if((this.state.pageIndex + 1) * this.state.numPhotos < this.props.photos.length){
+       if((this.state.pageIndex + 1) * this.state.numPhotos < this.props.photos.length){
             $("#photoContainer").fadeOut( 600, () => {
                 this.setState({ pageIndex: this.state.pageIndex + 1});
-                $("#photoContainer").fadeIn();  
+                $("#photoContainer").fadeIn();
+                const elements  = document.getElementsByClassName("img");
+                for(let i =0 ; i < elements.length; i++){
+                    elements[i].className = "img img-left"
+                }
             });
         }
     }
 
     onPrevious = (e: any) => {
         e.preventDefault();
-        if(this.state.pageIndex > 0){
+       if(this.state.pageIndex > 0){
             $("#photoContainer").fadeOut( 600, () => {
                 this.setState({ pageIndex: this.state.pageIndex - 1});
-                $("#photoContainer").fadeIn();  
+                $("#photoContainer").fadeIn();
+                const elements  = document.getElementsByClassName("img");
+                for(let i =0 ; i < elements.length; i++){
+                    elements[i].className = "img img-right"
+                }
             });
         }
     }

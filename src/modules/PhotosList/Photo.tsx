@@ -28,7 +28,7 @@ export const Photo: React.StatelessComponent<IPhotoProps> = (props: IPhotoProps)
     return(
         <PhotoContainer>
             <LazyLoad>
-                <Img id={'img' + props.id} src={props.thumbnailUrl} alt="" />
+                <Img id={'img' + props.id} src={props.thumbnailUrl} alt="" className="img img-left" />
             </LazyLoad>
         </PhotoContainer>
     );
