@@ -42,6 +42,7 @@ const SSection = styled.div`
 `;
 
 const SSectionContainer = styled.div`
+    width: 100%;
     position: absolute;
     vertical-align: middle;
     horizontal-align: center;
@@ -81,7 +82,7 @@ class PhotoList extends Component<IProps, IState>{
         this.props.getPhotos();
 
         $( window ).resize(() => {
-            this.setState({numPhotos: this.getNumPhotos()})
+            this.setState({pageIndex: 0, numPhotos: this.getNumPhotos()})
         });
     }
 
@@ -100,7 +101,7 @@ class PhotoList extends Component<IProps, IState>{
     }
 
     onNext = (e: any) =>{
-       if((this.state.pageIndex + 1) * this.state.numPhotos < this.props.photos.length){
+       if((this.state.pageIndex + 1) * this.state.numPhotos < this.props.photos.length-1){
             $("#photoContainer").fadeOut( 600, () => {
                 this.setState({ pageIndex: this.state.pageIndex + 1});
                 $("#photoContainer").fadeIn();
@@ -151,8 +152,8 @@ class PhotoList extends Component<IProps, IState>{
                     {photos}
                 </div>
                 { this.state.numPhotos !== 1 && <div>
-                    <button className="prev-next" onClick={this.onPrevious}>Prev</button>&nbsp;&nbsp;&nbsp;
-                    <button className="prev-next" onClick={this.onNext}>Next</button>
+                    <button className="prev-next" disabled={this.state.pageIndex <= 0} onClick={this.onPrevious}>Prev</button>&nbsp;&nbsp;&nbsp;
+                    <button className="prev-next" disabled={(this.state.pageIndex + 1) * this.state.numPhotos >= this.props.photos.length-1} onClick={this.onNext}>Next</button>
                 </div> }
                 { this.state.numPhotos === 1 && <ImgArrowRight src={ArrowSVG} onClick={this.onNext}/> }
             </SSectionContainer>)

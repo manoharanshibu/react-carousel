@@ -16,10 +16,22 @@ h1 {
   background: #fc5000;
   border-radius: 50px;
   color: white;
-  font: 500 1.6rem/1.7rem 'Montserrat';
+  font: 800 1.6rem/1.7rem 'Montserrat';
   height: 45px;
   max-width: 160px;
   width: 100%;
+}
+
+.prev-next:disabled {
+  background: lightgrey;
+  border: 1px solid #fc5000;
+  color: white;
+}
+
+.prev-next:disabled:hover {
+  background: lightgrey;
+  border: 1px solid #fc5000;
+  color: white;
 }
 
 .prev-next:hover {

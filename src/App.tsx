@@ -7,7 +7,7 @@ import {PhotosList} from './modules/PhotosList/PhotosList';
 import store from './store';
 
 const PhotoListContainer = styled.div`
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   padding: 10px;
 `;
